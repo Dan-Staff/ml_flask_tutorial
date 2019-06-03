@@ -64,4 +64,5 @@ Part a: DeepThought takes a very long time to train. What problems do you forsee
 Part b: DeepThought is represented by a very long uninteligable string of numbers. What problems do you forsee storing this data in the database and interacting with it using the REST API. Can you think of a more suitable way of storing the model (e.g. using major cloud providers)?
 
 
-
+### Exercise 4
+Can you find any services or products better suited to hosting ML models behind a network interface?
