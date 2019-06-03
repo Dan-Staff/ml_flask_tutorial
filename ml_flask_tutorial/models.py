@@ -1,4 +1,5 @@
 import time
+import random
 
 def mean(xs):
     return sum(xs) / len(xs)
@@ -78,7 +79,10 @@ class DeepThought:
         return 42
     
     def to_dict(self):
-        return {'type': 'DeepThought'}
+        return {
+            'type': 'DeepThought',
+            'data': ''.join(str(random.randint(0, 9)) for _ in range(1e6))
+        }
     
     @classmethod
     def from_dict(cls, kwargs):
