@@ -89,16 +89,7 @@ def create_app(testing=False):
 
     @app.route('/v1/models/<name>/predict', methods=['GET'])
     def predict_model(name):
-        kwargs = db.get('model', {}).get(name)
-        if kwargs is None:
-            abort(404)
-        
-        model = load_model(db, kwargs)
-        if model is None:
-            return abort(400)
-        xs = request.json['xs']
-        ys = model.predict(xs)
-        return jsonify({'ys': ys})
+        return jsonify({})
 
     return app, db
 
